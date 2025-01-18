@@ -1,0 +1,95 @@
+/* About container background and layout */
+.about-container {
+  background-image: url('https://miro.medium.com/v2/resize:fit:1200/1*F3FqMqt4ztx48-ArvHmtcg.png'); /* Replace with the path to your image */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
+  padding: 40px;
+  color: white; /* Makes the text more visible on darker backgrounds */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column; /* Stack content vertically */
+}
+
+/* Heading styles */
+.about-container h1 {
+  font-size: 3rem; /* Slightly larger for more impact */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* Ensure heading is visible on top of the background */
+}
+
+/* Contact Info container */
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 0 20px;
+  max-width: 1000px; /* Limit the max width to prevent stretching */
+  margin: 0 auto; /* Center the grid */
+  flex-wrap: wrap;
+}
+
+/* Card style for each contact item */
+.contact-item {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
+  border-radius: 12px; /* Rounded corners for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for more depth */
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  max-width: 450px; /* Limit card width for better layout control */
+  margin: 0 auto; /* Center the card */
+}
+
+/* Hover effect on cards */
+.contact-item:hover {
+  transform: translateY(-8px); /* Slightly stronger hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Social media links styling */
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin-bottom: 8px;
+}
+
+.social-links a {
+  color: #6F4F37;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design: Stack cards on smaller screens */
+@media (max-width: 768px) {
+  .contact-info {
+    grid-template-columns: 1fr; /* 1 column layout */
+  }
+
+  .contact-item {
+    max-width: 90%; /* Expand cards to fit smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 20px;
+  }
+
+  .about-container h1 {
+    font-size: 2rem; /* Smaller heading size for mobile devices */
+  }
+
+  .contact-item {
+    padding: 15px; /* Slightly less padding for smaller devices */
+  }
+}
